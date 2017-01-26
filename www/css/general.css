@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+	background-color: #DAFDFD;
+	color: black;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+#container {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+#logo {
+	margin-left: 5px;
+}
+
+header {
+    background-color: #DAFDFD;
+    width: 1000px;
+    height: 210px;
+    padding-bottom: 5px;
+	padding-left: 15px;
+	padding-top: 5px;
+}
+
+section {
+    background-color: #FFFFFF;
+    padding: 3px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+article {
+	width: 750px;
+    float: left;
+    padding: 5px;
+}
+
+aside {
+    width: 234px;
+    float: right;
+}
+
+h1 {
+    width: 900px;
+    height: 100px;
+    padding-top: 60px;
+    padding-left: 120px;
+	font-size: 80px;
+	font-family: 'Russo One', sans-serif;
+    text-align: left;
+}
+
+nav ul {
+    width: 900px;
+    height: 100px;
+    margin-top: 0px;
+	margin-left: 106px;
+	padding: 0px;
+	text-align: left;
+}
+
+nav li {
+	font-size: 35px;
+    font-family: 'Russo One', sans-serif;
+	display: inline;
+	margin-left: 17px;
+	text-decoration: none;
+	text-align: center;
+	margin-right: 17px;
+	padding-right: 20px;
+}
+
+a {
+    color: black;
+	text-decoration: none;
+}
+
+li a {
+    color: #22222F;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    margin-top: 0px;
+	margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 40px;
+    font-family: 'Russo One', sans-serif;
+	text-decoration: underline;
+}
+
+p {
+    padding: 5px;
+}
+
+#foot {
+    font-size: 14px;
+    text-align: center;
+}
+
+.recent {
+	padding: 3px;
+	margin: 3px;
+	margin-top: 10px;
+}
+
+.recent li {
+	margin-left: -20px;
+	font-size: 18px;
+}
+
+.recent a {
+	color: #0000EE;
+}
+
+.post_img {
+	border: 2px solid black;
+	margin-right: 10px;
+	margin: 5px;
+	height: 160px;
+}
+
+.post {
+	background-color: #ffe1b9;
+	border: 5px solid black;
+	margin-right: 15px;
+	margin-left: 10px;
+	height: 172px;
+	margin-bottom: 10px;
+}
+
+.post:hover {
+	background-color: #e6c8a0;
+}
+
+.post h3 {
+	font-size: 32px; font-size: 1.5vw;
+	text-decoration: underline;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.accordion {
+	font-size: 23.4px;
+	margin-left: 10px;
+	margin-right: 15px;
+	background-color: #ffe1b9;
+	display: block;
+}
+
+.accordion:hover {
+	background-color: #e6c8a0;
+}
+
+#art_head {
+    width: 745px;
+    border: 2px solid black;
+	background-color: #ffe1b9;
+}
+
+#art_text {
+    padding: 10px;
+}
+
+#tagline {
+    margin-top: 0px;
+    padding-left: 10px;
+    font-style: italic
+}
+
+#date {
+    margin-top: 0px;
+    padding-left: 10px;
+}
+
+figure {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 5px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+    margin-left: 8px;
+	margin-right: 10px;
+}
+
+figcaption {
+    text-align: center;
+	font-size: 12px;
+}
+
+#art_text ol {
+    padding: 5px;
+}
+
+#art_text li {
+    padding: 5px;
+    margin-left: 35px;
+    line_height: 25px;
+}
+
+#art_text p {
+    line_height: 27px;
+}
+
+#art_text a {
+    color: #0000EE;
+}
+
+h3 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#review_stats {
+    padding: 2px;
+}
+
+#archive {
+	margin-bottom: 20px;
+}
+
+.panel {
+	display: none;
+	list-style: none;
+}
+
+.panel.show {
+	display: block;
+}
+
+.panel.panel1 {
+	margin-left: 15px;
+}
+
+.panel.panel2 {
+	margin-left: 20px;
+}
+
+.panel ul {
+	margin-top: 5px;
+}
+
+.panel li a {
+	color: #0000FF;
+	font-size: 20px;
+}
+
+.panel li a:hover {
+	text-decoration: underline;
+}
+
+#disqus_thread {
+    position: relative;
+	padding: 5px;
+}
+#disqus_thread:after {
+    content: "";
+    display: block;
+    height: 55px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: white;
+}
+
+#share_buttons {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: inline;
+}
+
+#share_buttons li {
+	list-style: none;
+	float: left;
+	margin: 0px;
+	padding: 5px;
+}
+
+.fb-share-button {
+	vertical-align: top;
+}
+
+#logo_links {
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+#logo_links img {
+	width: 70px;
+	padding: 2px;
+}

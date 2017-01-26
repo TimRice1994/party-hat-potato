@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+	<title>Party Hat Potato</title>
+	<link>http://www.partyhatpotato.com</link>
+	<description>Board game blog, reviews, and more!</description>
+	<image>
+		<title>Party Hat Potato</title>
+		<url>http://www.partyhatpotato.com/img/PartyHatPotato.png</url>
+		<link>http://www.partyhatpotato.com</link>
+	</image>
+	<atom:link href="http://www.partyhatpotato.com/feed.xml" rel="self" type="application/rss+xml"/>
+		<item>
+		<title>Citadels Review</title>
+		<link>http://www.partyhatpotato.com/blog/2017/1/citadels-review.html</link>
+		<description>Every great city needs a few assassins and thieves.</description>
+		<guid isPermaLink="false">citadels-review</guid>
+	</item>
+	<item>
+		<title>Board Games vs. Video Games</title>
+		<link>http://www.partyhatpotato.com/blog/2017/1/board-games-vs-video-games.html</link>
+		<description>Identifying the strengths and weaknesses of each medium.</description>
+		<guid isPermaLink="false">board-games-vs-video-games</guid>
+	</item>
+	<item>
+		<title>SHAREagraphs</title>
+		<link>http://www.partyhatpotato.com/games/share-agraphs.html</link>
+		<description>The creative writing party game.</description>
+		<guid isPermaLink="false">share-agraphs</guid>
+	</item>
+	<item>
+		<title>Battle Line Review</title>
+		<link>http://www.partyhatpotato.com/reviews/2017/1/battle-line-review.html</link>
+		<description>I just need to draw this one card.....Dang. I'll get it next time for sure though.</description>
+		<guid isPermaLink="false">battle-line-review</guid>
+	</item>
+	<item>
+		<title>Dominion's Hidden Lore</title>
+		<link>http://www.partyhatpotato.com/blog/2016/12/dominion-hidden-lore.html</link>
+		<description>A few theories about the history of the realm.</description>
+		<guid isPermaLink="false">dominion-hidden-lore</guid>
+	</item>
+</channel>
+
+</rss>
