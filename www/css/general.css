@@ -150,7 +150,7 @@ p {
 }
 
 .post h3 {
-	font-size: 32px; font-size: 1.5vw;
+	font-size: 28px;
 	text-decoration: underline;
 	margin-top: 8px;
 	margin-bottom: 8px;
@@ -304,4 +304,22 @@ h3 {
 #logo_links img {
 	width: 70px;
 	padding: 2px;
+}
+
+@media (max-width: 770px) {
+	#container {
+		width: 770px !important;
+	}
+	aside {
+		display: none !important;
+	}
+	h1 {
+		font-size: 70px !important;
+	}
+	nav li {
+		font-size: 30px !important;
+	}
+	.li_rss {
+		display: none !important;
+	}
 }

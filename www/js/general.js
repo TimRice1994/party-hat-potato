@@ -58,6 +58,7 @@ function gen_header() {
 	ul_cont.appendChild(li_contact);
 	
 	var li_rss = document.createElement("li");
+	li_rss.setAttribute("id", "li_rss");
 	var rss_a = document.createElement("a");
 	rss_a.setAttribute("href", "http://www.partyhatpotato.com/feed.xml");
 	var rss_img = document.createElement("img");
