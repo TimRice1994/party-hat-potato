@@ -11,7 +11,13 @@
 		<link>http://www.partyhatpotato.com</link>
 	</image>
 	<atom:link href="http://www.partyhatpotato.com/feed.xml" rel="self" type="application/rss+xml"/>
-		<item>
+	<item>
+		<title>5 Board Game Movie Ideas</title>
+		<link>http://www.partyhatpotato.com/blog/2017/1/5-board-game-movie-ideas.html</link>
+		<description>I would actually pay to see these movies.</description>
+		<guid isPermaLink="false">5-board-game-movie-ideas</guid>
+	</item>
+	<item>
 		<title>Citadels Review</title>
 		<link>http://www.partyhatpotato.com/blog/2017/1/citadels-review.html</link>
 		<description>Every great city needs a few assassins and thieves.</description>
@@ -34,12 +40,6 @@
 		<link>http://www.partyhatpotato.com/reviews/2017/1/battle-line-review.html</link>
 		<description>I just need to draw this one card.....Dang. I'll get it next time for sure though.</description>
 		<guid isPermaLink="false">battle-line-review</guid>
-	</item>
-	<item>
-		<title>Dominion's Hidden Lore</title>
-		<link>http://www.partyhatpotato.com/blog/2016/12/dominion-hidden-lore.html</link>
-		<description>A few theories about the history of the realm.</description>
-		<guid isPermaLink="false">dominion-hidden-lore</guid>
 	</item>
 </channel>
 
