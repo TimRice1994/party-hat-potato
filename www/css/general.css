@@ -8,26 +8,35 @@ img {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 16pt;
 	background-color: #DAFDFD;
 	color: black;
     margin: 0 auto;
     padding: 0 auto;
+	max-width: 1000px;
+	width: 100%;
 }
 
 #container {
-	width: 1000px;
-	margin: 0 auto;
-	padding: 0 auto;
+	max-width: 1000px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 #logo {
 	margin-left: 5px;
 }
 
+#potato {
+	width: 100px;
+	float: left;
+}
+
 header {
     background-color: #DAFDFD;
-    width: 1000px;
+    max-width: 1000px;
+	width: 100%;
     height: 210px;
     padding-bottom: 5px;
 	padding-left: 15px;
@@ -42,28 +51,28 @@ section {
 }
 
 article {
-	width: 750px;
-    float: left;
+	width: 74.5%;
+	float: left;
     padding: 5px;
 }
 
 aside {
-    width: 234px;
+    width: 24%;
     float: right;
 }
 
 h1 {
-    width: 900px;
+    width: 90%;
     height: 100px;
     padding-top: 60px;
     padding-left: 120px;
-	font-size: 80px;
+	font-size: 4.2em;
 	font-family: 'Russo One', sans-serif;
     text-align: left;
 }
 
 nav ul {
-    width: 900px;
+    width: 90%;
     height: 100px;
     margin-top: 0px;
 	margin-left: 106px;
@@ -72,7 +81,7 @@ nav ul {
 }
 
 nav li {
-	font-size: 35px;
+	font-size: 2em;
     font-family: 'Russo One', sans-serif;
 	display: inline;
 	margin-left: 17px;
@@ -100,7 +109,7 @@ h2 {
 	margin-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 40px;
+    font-size: 2.15em;
     font-family: 'Russo One', sans-serif;
 	text-decoration: underline;
 }
@@ -110,7 +119,7 @@ p {
 }
 
 #foot {
-    font-size: 14px;
+    font-size: 0.875em;
     text-align: center;
 }
 
@@ -122,7 +131,7 @@ p {
 
 .recent li {
 	margin-left: -20px;
-	font-size: 18px;
+	font-size: 1.125em;
 }
 
 .recent a {
@@ -133,7 +142,9 @@ p {
 	border: 2px solid black;
 	margin-right: 10px;
 	margin: 5px;
-	height: 160px;
+	margin-top: 8px;
+	width: 267px;
+	display: table-header-group;
 }
 
 .post {
@@ -141,8 +152,11 @@ p {
 	border: 5px solid black;
 	margin-right: 15px;
 	margin-left: 10px;
-	height: 172px;
+	height: 180px;
 	margin-bottom: 10px;
+	display: table;
+	width: 97%;
+	border-spacing: 2px;
 }
 
 .post:hover {
@@ -150,14 +164,19 @@ p {
 }
 
 .post h3 {
-	font-size: 28px;
+	font-size: 1.35em;
 	text-decoration: underline;
 	margin-top: 8px;
 	margin-bottom: 8px;
+	display: table-footer-group;
+}
+
+th {
+	padding: 50px;
 }
 
 .accordion {
-	font-size: 23.4px;
+	font-size: 1em;
 	margin-left: 10px;
 	margin-right: 15px;
 	background-color: #ffe1b9;
@@ -169,13 +188,30 @@ p {
 }
 
 #art_head {
-    width: 745px;
+    width: 98%;
     border: 2px solid black;
 	background-color: #ffe1b9;
+	font-size: 0.8em;
 }
 
 #art_text {
     padding: 10px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	word-break: break-word;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+
+#art_text img {
+	width: 100%;
+}
+
+#score img {
+	width: 18%;
 }
 
 #tagline {
@@ -206,16 +242,17 @@ figcaption {
 
 #art_text ol {
     padding: 5px;
+	margin-left: 20px;
 }
 
 #art_text li {
     padding: 5px;
-    margin-left: 35px;
-    line_height: 25px;
+    margin-left: 5px;
+    line_height: 1.2em;
 }
 
 #art_text p {
-    line_height: 27px;
+    line_height: 1.2em;
 }
 
 #art_text a {
@@ -228,7 +265,8 @@ h3 {
 }
 
 #review_stats {
-    padding: 2px;
+    padding: 5px;
+	margin-left: 20px;
 }
 
 #archive {
@@ -245,11 +283,11 @@ h3 {
 }
 
 .panel.panel1 {
-	margin-left: 15px;
+	margin-left: 10px;
 }
 
 .panel.panel2 {
-	margin-left: 20px;
+	margin-left: 15px;
 }
 
 .panel ul {
@@ -258,7 +296,7 @@ h3 {
 
 .panel li a {
 	color: #0000FF;
-	font-size: 20px;
+	font-size: 1em;
 }
 
 .panel li a:hover {
@@ -268,15 +306,6 @@ h3 {
 #disqus_thread {
     position: relative;
 	padding: 5px;
-}
-#disqus_thread:after {
-    content: "";
-    display: block;
-    height: 55px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    background: white;
 }
 
 #share_buttons {
@@ -302,24 +331,75 @@ h3 {
 }
 
 #logo_links img {
-	width: 70px;
+	width: 30%;
 	padding: 2px;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 800px) {
+	body {
+		width: 100% !important;
+	}
 	#container {
-		width: 770px !important;
+		width: 100% !important;
+	}
+	#potato {
+		width: 10vw !important;
+	}
+	header {
+		height: 20vw !important;
+		padding-right: 0 !important;
+		width: auto !important;
 	}
 	aside {
 		display: none !important;
 	}
+	section {
+		max-width: 1000px !important;
+		width: 100% !important;
+		margin-top: 1% !important;
+		padding: 0 !important;
+	}
+	article {
+		max-width: 1000px !important;
+		width: 95% !important;
+	}
 	h1 {
-		font-size: 70px !important;
+		font-size: 8.5vw !important;
+		padding-top: 6%;
+		padding-left: 12%;
+		width: auto !important;
+		height: auto !important;
+	}
+	h2 {
+		font-size: 7vw !important;
+	}
+	nav {
+		width: auto !important;
 	}
 	nav li {
-		font-size: 30px !important;
+		font-size: 4vw !important;
+		padding-right: 0 !important;
+		margin-right: 2% !important;
+		margin-left: 2%;
 	}
-	.li_rss {
+	nav ul {
+		margin-left: 10.6% !important;
+		height: auto !important;
+		width: auto !important;
+		margin-top: -5px !important;
+	}
+	#li_rss {
 		display: none !important;
+	}
+	.post_img {
+		width: 96% !important;
+		height: auto !important;
+		clear: left;
+	}
+	.post {
+		height: auto !important;
+		padding-right: 0 !important;
+		margin-left: 0 !important;
+		font-size: 4vw !important;
 	}
 }

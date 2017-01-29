@@ -78,7 +78,6 @@ function gen_latest() {
 		}
 		thumb_cont.setAttribute("style", "float:left;");
 		thumb_cont.setAttribute("class", "post_img");
-		post_a.appendChild(thumb_cont);
 		
 		var post_h3 = document.createElement("h3");
 		if (use_blog) {
@@ -116,6 +115,7 @@ function gen_latest() {
 		}
 		post_p_date.appendChild(post_p_date_text);
 		post_a.appendChild(post_h3);
+		post_a.appendChild(thumb_cont);
 		post_a.appendChild(post_p_tag);
 		post_a.appendChild(post_p_date);
 		

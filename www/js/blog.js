@@ -69,7 +69,6 @@ function gen_latest() {
 		thumb_cont.setAttribute("src", blog_list[i].thumb);
 		thumb_cont.setAttribute("style", "float:left;");
 		thumb_cont.setAttribute("class", "post_img");
-		post_a.appendChild(thumb_cont);
 		var post_h3 = document.createElement("h3");
 		var post_h3_text = document.createTextNode(blog_list[i].title);
 		post_h3.appendChild(post_h3_text);
@@ -82,6 +81,7 @@ function gen_latest() {
 		var post_p_date_text = document.createTextNode((((String(blog_list[i].date.getMonth()+1).concat("/")).concat(String(blog_list[i].date.getDate()))).concat("/")).concat(String(blog_list[i].date.getFullYear())));
 		post_p_date.appendChild(post_p_date_text);
 		post_a.appendChild(post_h3);
+		post_a.appendChild(thumb_cont);
 		post_a.appendChild(post_p_tag);
 		post_a.appendChild(post_p_date);
 		post_cont.appendChild(post_a);

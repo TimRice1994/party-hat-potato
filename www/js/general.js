@@ -7,7 +7,7 @@ function gen_header() {
 	a_index.setAttribute("href", "http://www.partyhatpotato.com/index.html");
 	var img_potato = document.createElement("img");
 	img_potato.setAttribute("src", "http://www.partyhatpotato.com/img/PartyHatPotato.png");
-	img_potato.setAttribute("style", "width:100px;float:left;");
+	img_potato.setAttribute("id", "potato");
 	a_index.appendChild(img_potato);
 	div_logo.appendChild(a_index);
 	
