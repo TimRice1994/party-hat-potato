@@ -339,7 +339,7 @@ h3 {
 	padding: 2px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
 	body {
 		width: 100% !important;
 	}
