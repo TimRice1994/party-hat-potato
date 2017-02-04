@@ -61,6 +61,10 @@ aside {
     float: right;
 }
 
+aside li {
+	padding-bottom: 8px;
+}
+
 h1 {
     width: 90%;
     height: 100px;
