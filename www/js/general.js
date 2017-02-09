@@ -143,7 +143,7 @@ function gen_aside() {
 	u_tag2.appendChild(recent_reviews_title_text);
 	recent_reviews_title.appendChild(u_tag2);
 	var recent_reviews_ul = document.createElement("ul");
-	for (var i = 0; i < 3; i++) {
+	for (var i = 0; i < 4; i++) {
 		var review_li = document.createElement("li");
 		var review_a = document.createElement("a");
 		review_a.setAttribute("href", review_list[i].url);

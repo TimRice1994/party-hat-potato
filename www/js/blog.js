@@ -60,7 +60,7 @@ function gen_archive() {
 }
 
 function gen_latest() {
-	for (var i = 0; i < 3; i++) {
+	for (var i = 0; i < 4; i++) {
 		var post_cont = document.createElement("div");
 		post_cont.setAttribute("class", "post");
 		var post_a = document.createElement("a");
