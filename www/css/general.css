@@ -135,7 +135,7 @@ p {
 
 .recent li {
 	margin-left: -20px;
-	font-size: 1.125em;
+	font-size: 1.1em;
 }
 
 .recent a {
@@ -195,7 +195,7 @@ th {
     width: 98%;
     border: 2px solid black;
 	background-color: #ffe1b9;
-	font-size: 0.8em;
+	font-size: 1em;
 }
 
 #art_text {
@@ -252,11 +252,17 @@ figcaption {
 #art_text li {
     padding: 5px;
     margin-left: 5px;
-    line_height: 1.2em;
+	line-height: 1.5;
 }
 
 #art_text p {
-    line_height: 1.2em;
+	padding-bottom: 15px;
+    line-height: 1.5;
+}
+
+#art_text h3 {
+	padding-bottom: 15px;
+    line-height: 1.5;
 }
 
 #art_text a {
