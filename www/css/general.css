@@ -331,6 +331,10 @@ h3 {
 	padding: 5px;
 }
 
+.fb-share-button {
+	margin-top: -2px;
+}
+
 #logo_links {
 	margin-top: 5px;
 	margin-bottom: 15px;

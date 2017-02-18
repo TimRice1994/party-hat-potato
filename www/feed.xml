@@ -13,6 +13,12 @@
 	<atom:link href="http://www.partyhatpotato.com/feed.xml" rel="self" type="application/rss+xml"/>
 	<item>
 		<title>The Next Era of Board Games: Part 1</title>
+		<link>http://www.partyhatpotato.com/blog/2017/2/next-era-board-games-2.html</link>
+		<description>The rise of progresseive board games.</description>
+		<guid isPermaLink="false">next-era-board-games-2</guid>
+	</item>
+	<item>
+		<title>The Next Era of Board Games: Part 1</title>
 		<link>http://www.partyhatpotato.com/blog/2017/2/next-era-board-games-1.html</link>
 		<description>The growing prevalence of smartphones and mobile apps in tabletop games.</description>
 		<guid isPermaLink="false">next-era-board-games-1</guid>
@@ -40,12 +46,6 @@
 		<link>http://www.partyhatpotato.com/blog/2017/1/board-games-vs-video-games.html</link>
 		<description>Identifying the strengths and weaknesses of each medium.</description>
 		<guid isPermaLink="false">board-games-vs-video-games</guid>
-	</item>
-	<item>
-		<title>SHAREagraphs</title>
-		<link>http://www.partyhatpotato.com/games/share-agraphs.html</link>
-		<description>The creative writing party game.</description>
-		<guid isPermaLink="false">share-agraphs</guid>
 	</item>
 </channel>
 
