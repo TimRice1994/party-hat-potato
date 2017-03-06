@@ -8,6 +8,7 @@ function post(titleIn, tagIn, authorIn, dateIn, thumbIn, urlIn) {
 }
 
 var blog_list = [
+new post("Abandoned Prototypes", '"Success consists of going from failure to failure without loss of enthusiasm." - Winston Churchill', "Tim Rice", new Date(2017,3-1,4), "http://www.partyhatpotato.com/blog/2017/3/img/miner-dice2.jpg", "http://www.partyhatpotato.com/blog/2017/3/abandoned-prototypes.html"),
 new post("Next Era of Board Games (2/2)", "The rise of progressive board games.", "Tim Rice", new Date(2017,2-1,18), "http://www.partyhatpotato.com/blog/2017/2/img/netg2-thumb.jpg", "http://www.partyhatpotato.com/blog/2017/2/next-era-board-games-2.html"),
 new post("Next Era of Board Games (1/2)", "The growing prevalence of smartphones and mobile apps in tabletop games.", "Tim Rice", new Date(2017,2-1,11), "http://www.partyhatpotato.com/blog/2017/2/img/netg1-thumb.jpg", "http://www.partyhatpotato.com/blog/2017/2/next-era-board-games-1.html"),
 new post("5 Board Game Movie Ideas", "I would actually pay to see these movies.", "Tim Rice", new Date(2017,1-1,28), "http://www.partyhatpotato.com/blog/2017/1/img/5bgmi-thumb.jpg", "http://www.partyhatpotato.com/blog/2017/1/5-board-game-movie-ideas.html"),
@@ -17,6 +18,7 @@ new post("Introduction", "The potato has launched.", "Tim Rice", new Date(2016,1
 ];
 
 var review_list = [
+new post("Ca$h 'n Guns Review", "The glorious gangster gun game.", "Tim Rice", new Date(2017,2-1,25), "http://www.partyhatpotato.com/reviews/2017/2/img/cash-n-guns-box.jpg", "http://www.partyhatpotato.com/reviews/2017/2/cash-n-guns-review.html"),
 new post("Galaxy Trucker Review", "It’s like building a beautiful snowman, and then watching it melt.", "Tim Rice", new Date(2017,2-1,4), "http://www.partyhatpotato.com/reviews/2017/2/img/galaxy-trucker-box.jpg", "http://www.partyhatpotato.com/reviews/2017/2/galaxy-trucker-review.html"),
 new post("Citadels Review", "Every great city needs a few assassins and thieves.", "Tim Rice", new Date(2017,1-1,21), "http://www.partyhatpotato.com/reviews/2017/1/img/citadels-box.jpg", "http://www.partyhatpotato.com/reviews/2017/1/citadels-review.html"),
 new post("Battle Line Review", "I just need to draw this one card.....Dang. I'll get it next time for sure though.", "Tim Rice", new Date(2017,1-1,5), "http://www.partyhatpotato.com/reviews/2017/1/img/battle-line-box.jpg", "http://www.partyhatpotato.com/reviews/2017/1/battle-line-review.html"),

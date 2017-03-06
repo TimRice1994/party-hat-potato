@@ -12,6 +12,18 @@
 	</image>
 	<atom:link href="http://www.partyhatpotato.com/feed.xml" rel="self" type="application/rss+xml"/>
 	<item>
+		<title>Abandoned Prototypestitle>
+		<link>http://www.partyhatpotato.com/blog/2017/3/abandoned-prototypes.html</link>
+		<description>"Success consists of going from failure to failure without loss of enthusiasm." - Winston Churchill</description>
+		<guid isPermaLink="false">abandoned-prototypes</guid>
+	</item>
+	<item>
+		<title>Ca$h 'n Guns Review</title>
+		<link>http://www.partyhatpotato.com/reviews/2017/2/cash-n-guns-review.html</link>
+		<description>The glorious gangster gun game.</description>
+		<guid isPermaLink="false">cash-n-guns-review</guid>
+	</item>
+	<item>
 		<title>The Next Era of Board Games: Part 2</title>
 		<link>http://www.partyhatpotato.com/blog/2017/2/next-era-board-games-2.html</link>
 		<description>The rise of progresseive board games.</description>
@@ -34,18 +46,6 @@
 		<link>http://www.partyhatpotato.com/blog/2017/1/5-board-game-movie-ideas.html</link>
 		<description>I would actually pay to see these movies.</description>
 		<guid isPermaLink="false">5-board-game-movie-ideas</guid>
-	</item>
-	<item>
-		<title>Citadels Review</title>
-		<link>http://www.partyhatpotato.com/blog/2017/1/citadels-review.html</link>
-		<description>Every great city needs a few assassins and thieves.</description>
-		<guid isPermaLink="false">citadels-review</guid>
-	</item>
-	<item>
-		<title>Board Games vs. Video Games</title>
-		<link>http://www.partyhatpotato.com/blog/2017/1/board-games-vs-video-games.html</link>
-		<description>Identifying the strengths and weaknesses of each medium.</description>
-		<guid isPermaLink="false">board-games-vs-video-games</guid>
 	</item>
 </channel>
 
