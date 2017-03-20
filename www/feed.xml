@@ -12,7 +12,13 @@
 	</image>
 	<atom:link href="http://www.partyhatpotato.com/feed.xml" rel="self" type="application/rss+xml"/>
 	<item>
-		<title>Abandoned Prototypestitle>
+		<title>Escape: The Curse of the Temple Review</title>
+		<link>http://www.partyhatpotato.com/reviews/2017/3/escape-curse-temple-review.html</link>
+		<description>For those times when you need just a bit more panic in your life.</description>
+		<guid isPermaLink="false">escape-curse-temple-review</guid>
+	</item>
+	<item>
+		<title>Abandoned Prototypes</title>
 		<link>http://www.partyhatpotato.com/blog/2017/3/abandoned-prototypes.html</link>
 		<description>"Success consists of going from failure to failure without loss of enthusiasm." - Winston Churchill</description>
 		<guid isPermaLink="false">abandoned-prototypes</guid>
@@ -40,12 +46,6 @@
 		<link>http://www.partyhatpotato.com/reviews/2017/2/galaxy-trucker-review.html</link>
 		<description>It’s like building a beautiful snowman, and then watching it melt.</description>
 		<guid isPermaLink="false">galaxy-trucker-review</guid>
-	</item>
-	<item>
-		<title>5 Board Game Movie Ideas</title>
-		<link>http://www.partyhatpotato.com/blog/2017/1/5-board-game-movie-ideas.html</link>
-		<description>I would actually pay to see these movies.</description>
-		<guid isPermaLink="false">5-board-game-movie-ideas</guid>
 	</item>
 </channel>
 

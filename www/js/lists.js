@@ -18,6 +18,7 @@ new post("Introduction", "The potato has launched.", "Tim Rice", new Date(2016,1
 ];
 
 var review_list = [
+new post("Escape Review", "For those times when you need just a bit more panic in your life.", "Tim Rice", new Date(2017,3-1,11), "http://www.partyhatpotato.com/reviews/2017/3/img/escape-thumb.jpg", "http://www.partyhatpotato.com/reviews/2017/3/escape-curse-temple-review.html"),
 new post("Ca$h 'n Guns Review", "The glorious gangster gun game.", "Tim Rice", new Date(2017,2-1,25), "http://www.partyhatpotato.com/reviews/2017/2/img/cash-n-guns-box.jpg", "http://www.partyhatpotato.com/reviews/2017/2/cash-n-guns-review.html"),
 new post("Galaxy Trucker Review", "It’s like building a beautiful snowman, and then watching it melt.", "Tim Rice", new Date(2017,2-1,4), "http://www.partyhatpotato.com/reviews/2017/2/img/galaxy-trucker-box.jpg", "http://www.partyhatpotato.com/reviews/2017/2/galaxy-trucker-review.html"),
 new post("Citadels Review", "Every great city needs a few assassins and thieves.", "Tim Rice", new Date(2017,1-1,21), "http://www.partyhatpotato.com/reviews/2017/1/img/citadels-box.jpg", "http://www.partyhatpotato.com/reviews/2017/1/citadels-review.html"),
