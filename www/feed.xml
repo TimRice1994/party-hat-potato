@@ -12,6 +12,12 @@
 	</image>
 	<atom:link href="http://www.partyhatpotato.com/feed.xml" rel="self" type="application/rss+xml"/>
 	<item>
+		<title>The Love Letter Decision Tree</title>
+		<link>http://www.partyhatpotato.com/blog/2017/3/love-letter-decision-tree.html</link>
+		<description>How many different ways can a round of Love Letter unfold?</description>
+		<guid isPermaLink="false">love-letter-decision-tree</guid>
+	</item>
+	<item>
 		<title>Escape: The Curse of the Temple Review</title>
 		<link>http://www.partyhatpotato.com/reviews/2017/3/escape-curse-temple-review.html</link>
 		<description>For those times when you need just a bit more panic in your life.</description>
@@ -40,12 +46,6 @@
 		<link>http://www.partyhatpotato.com/blog/2017/2/next-era-board-games-1.html</link>
 		<description>The growing prevalence of smartphones and mobile apps in tabletop games.</description>
 		<guid isPermaLink="false">next-era-board-games-1</guid>
-	</item>
-	<item>
-		<title>Galaxy Trucker Review</title>
-		<link>http://www.partyhatpotato.com/reviews/2017/2/galaxy-trucker-review.html</link>
-		<description>It’s like building a beautiful snowman, and then watching it melt.</description>
-		<guid isPermaLink="false">galaxy-trucker-review</guid>
 	</item>
 </channel>
 

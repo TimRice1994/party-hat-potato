@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name=viewport content="width=device-width, initial-scale=1">
+<meta property="og:url"           content="http://www.partyhatpotato.com/blog/2017/3/love-letter-decision-tree.html" />
+<meta property="og:type"          content="article" />
+<meta property="og:title"         content="The Love Letter Decision Tree" />
+<meta property="og:description"   content="How many different ways can a round of Love Letter unfold?" />
+<meta property="og:image"         content="http://www.partyhatpotato.com/blog/2017/3/img/love-letter-decision-tree-thumb.jpg" />
+<meta property="fb:app_id"		  content="1843525269257384" />
+<title>The Love Letter Decision Tree - Party Hat Potato</title>
+
+<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+
+<style type="text/css">
+    @import url('../../../css/general.css');
+</style>
+</head>
+
+<body>
+
+<div id="container">
+    <header></header>
+    <section>
+        <article>
+            <div id="art_head">
+                <h2>The <i>Love Letter</i> Decision Tree</h2>
+                <p id='tagline'>How many different ways can a round of Love Letter unfold?</p>
+                <p id='date'>Posted on 3/25/2017 by Tim Rice</p>
+            </div>
+            <figure style="float:right;">
+                <img id="thumb" src="img/love-letter-decision-tree-thumb.jpg" alt="Love Letter Calculator">
+            </figure>
+            <div id="art_text">
+				<p>This project all started with a curiosity.  Every time I play <i>Love Letter</i>, I am consistently impressed that the game offers a variety of interesting decisions each time I play.  You would think that a game that consists of only 16 cards (and only 8 unique ones) would exhaust itself pretty quickly, but that doesn’t seem to be the case.</p>
+				<p>This got me thinking.  How many different ways can a round of <i>Love Letter</i> unfold?  This question has often been pondered for abstract games such as <i>Chess</i> and <i>Go</i>, but those numbers are so enormous that no one has ever been able to calculate their exact values.  Mathematicians have found that there are far more possible <i>Chess</i> games than there are atoms in the universe (<a href="http://www.popsci.com/science/article/2010-12/fyi-how-many-different-ways-can-chess-game-unfold">source</a>), and <i>Go</i> has even more than that.  Pretty crazy when you think about it.</p>
+				<p>Surely though, a game as simple as <i>Love Letter</i> doesn’t have that many possibilities...right?  I made it my project to figure out how many <i>Love Letter</i> rounds are possible, and it turned out to be a lot more difficult than I expected.  Nonetheless, the results are pretty interesting.</p>
+				<p>Be advised, this article contains math and computer science jargon (you have been warned).  There’s a little bit of graph theory, some combinatorics, and even a recursive algorithm (the three ingredients for a good time, am I right??  Sigh….).</p>
+				
+				<h3>The Game</h3>
+				<p>If you’ve never played <i>Love Letter</i> before, it’s pretty simple.  There is a deck of 16 cards: 5 Guards, 2 Priests, 2 Barons, 2 Handmaids, 2 Princes, 1 King, 1 Countess, and 1 Princess.  Each round, one card is set aside (face down) and each player is dealt one card.  Players will then take turns drawing one card, playing one of their two cards, and applying the played character's effect.  Each character has a different effect (these will be explained later).  This continues until either the deck is exhausted, or only one player remains.</p>
+				<img src="img/love-letter-dt-all-cards.jpg" alt="">
+				
+				<h3>Defining the Problem</h3>
+				<p>In order to count the number of games, we need to define what a game state is and when it changes. In <i>Love Letter</i>, every draw and every decision affects the options that are available for the rest of the round.  Once the princess is drawn, for example, it can never be drawn again.  For the purposes of this analysis, the game state changes when:</p>
+				<ul>
+					<li>A card is dealt, drawn, or set aside (at the beginning of the game)</li>
+					<li>A player chooses a card from their hand to play</li>
+					<li>Certain characters’ abilities affect future options (a guard eliminates someone, a handmaid protects someone, etc.)</li>
+				</ul>
+				<p>Note that the game state does not change when a player gains new information.  The Priest’s effect, for example, never changes the game state under this definition.  Even though it gives a player information, which is an important part of the game, it does not affect anybody’s options in any way.  Players are never required to use any of the information that they’ve gained, so even though you could say that choosing to look at one player’s card over another constitutes a different game experience, I decided against tracking this type of information flow.</p>
+				<p>I’m also assuming that there are four players starting each round.  These same methods could be used to count the number of two-player and three-player games as well, but I’m sticking with four players for now.</p>
+				
+				<h3>Decision Tree Model</h3>
+				<p>In algorithm design, a <a href="https://en.wikipedia.org/wiki/Decision_tree">decision tree</a> is a common tool used to structure a series of possible outcomes.  In summary, a decision tree is a group of hierarchically connected nodes.  If we use this to model a game, each node represents a change in the game state.  Each time the game state changes, each node branches off and creates some number of child nodes equal to the number of possible outcomes that result from that change.</p>
+				<p>In the context of this problem, our top-level node represents the first thing that happens in the game: setting the first card aside.  There are 8 different possible outcomes here (one for each character being removed), so our first change branches off into 8 different nodes:</p>
+				<img src="img/diagram1.jpg" alt="">
+				<p>All of these new child nodes now need to handle the second game state change, which is the dealing of the first card.  You might think that each of these nodes will now branch off 8 new nodes of their own, but that isn’t true.  In cases where the King, Countess, or Princess are set aside, it isn’t possible to pull them from the deck anymore because there are only one copy of each:</p>
+				<img src="img/diagram2.jpg" alt="">
+				<p>We’re only two cards in and we’re already at 61 unique paths...so you can begin to see how rapidly the possibilities multiply.  In order to find the number of possible games, we need to figure out a way to count the number of leaf nodes (nodes that don’t generate any children), since one leaf node represents one game’s end.  Some of these will appear at the very bottom of the tree, but since a game of <i>Love Letter</i> can end before the deck runs out, leaf nodes will appear at many different levels of the tree.</p>
+				
+				<h3>Analyzing the Tree</h3>
+				<p>Every round of <i>Love Letter</i> follows the same pattern.  It starts with 5 draw nodes (one card set aside and one dealt to each player) which can create anywhere from 1-8 branches each, and then each player’s turn consists of three node levels (draw, choice, and effect).  These three node levels repeat until the game ends.</p>
+				<img src="img/diagram3.jpg" alt="">
+				<p>The choice nodes usually create 2 branches (a player decides between two cards in their hand), but sometimes the player doesn’t have a choice (in cases where the countess must be played, or he/she has two of the same card in hand), so in those cases, only one branch is created.</p>
+				<p>The effect nodes are where things start getting complicated.  Some characters have no effect at all on the game state when they’re played, while others can create up to 4 different branches.  In addition to that complexity, the number of branches that a character’s effect creates depends on the game state at the moment that it triggers, so in order to understand how this tree develops, we first need to understand how many options these effects give players under all possible conditions.</p>
+				
+				<h3>The Guard</h3>
+				<img src="img/guard.jpg" alt="" style="width:65%;">
+				<p>The Guard creates 1-4 branches:</p>
+				<ul>
+					<li>A no-effect branch is always an option because the player can always guess wrong.  This branch is also taken if all other eligible players are protected by the Handmaid.</li>
+					<li>If the left player is not eliminated, not protected, and they don’t have a guard in their hand, another branch is created where the left player is eliminated.</li>
+					<li>If the across player is not eliminated, not protected, and they don’t have a guard in their hand, another branch is created where the across player is eliminated.</li>
+					<li>If the right player is not eliminated, not protected, and they don’t have a guard in their hand, another branch is created where the right player is eliminated.</li>
+				</ul>
+				
+				<h3>The Priest</h3>
+				<img src="img/priest.jpg" alt="" style="width:65%;">
+				<p>The Priest always creates only one branch, and it has no special effect on the game state.</p>
+				
+				<h3>The Baron</h3>
+				<img src="img/baron.jpg" alt="" style="width:65%;">
+				<p>The Baron creates 1-3 branches:</p>
+				<ul>
+					<li>If the left player is not eliminated, not protected, and the current player has a higher card than the left player, then a branch is created where the left player is eliminated.</li>
+					<li>If the across player is not eliminated, not protected, and the current player has a higher card than the left player, then a branch is created where the across player is eliminated.</li>
+					<li>If the right player is not eliminated, not protected, and the current player has a higher card than the left player, then a branch is created where the right player is eliminated.</li>
+					<li>If the current player has a lower card than any other eligible player, a branch is created where the current player is eliminated.</li>
+					<li>If all other players are either eliminated, protected, or the current player has the same card as any of the other players, a branch is created that has no special effect on the game state.</li>
+				</ul>
+				
+				<h3>The Handmaid</h3>
+				<img src="img/handmaid.jpg" alt="" style="width:65%;">
+				<p>The Handmaid always creates only one branch, but she does have an effect on the game state as her protection limits the options in future branches.</p>
+				
+				<h3>The Prince</h3>
+				<img src="img/prince.jpg" alt="" style="width:65%;">
+				<p>The Prince creates 1-4 branches:</p>
+				<ul>
+					<li>One branch is always created where the current player discards his/her own card and draws another.</li>
+					<li>If the left player is not eliminated or protected, a branch is created where the left player discards his/her card and draws another.</li>
+					<li>If the across player is not eliminated or protected, a branch is created where the across player discards his/her card and draws another.</li>
+					<li>If the right player is not eliminated or protected, a branch is created where the right player discards his/her card and draws another.</li>
+				</ul>
+				
+				<h3>The King</h3>
+				<img src="img/king.jpg" alt="" style="width:65%;">
+				<p>The King creates 1-3 branches:</p>
+				<ul>
+					<li>If the left player is not eliminated or protected, a branch is created where the current player and the left player swap cards.</li>
+					<li>If the across player is not eliminated or protected, a branch is created where the current player and the across player swap cards.</li>
+					<li>If the right player is not eliminated or protected, a branch is created where the current player and the right player swap cards.</li>
+					<li>If all other players are eliminated or protected, a branch that has no effect on the game state becomes an option.</li>
+				</ul>
+				
+				<h3>The Countess</h3>
+				<img src="img/countess.jpg" alt="" style="width:65%;">
+				<p>The Countess always creates one branch that has no effect on the game state when played.  It is relevant, however, during choice nodes because it eliminates branches when the other card in hand is a Prince or the King.</p>
+				
+				<h3>The Princess</h3>
+				<img src="img/princess.jpg" alt="" style="width:65%;">
+				<p>The Princess always creates one branch where the current player is eliminated when played.  Interestingly, this never happens in any real-life game of <i>Love Letter</i>, but it is a valid option nonetheless.</p>
+				
+				<h3>Time for Some Math</h3>
+				<p>The first thing I tried to do to solve this problem was develop a counting equation, but I quickly realized that incorporating possibilities from every card effect and accounting for interactions at so many different levels of the tree was too complicated for me to handle by hand (perhaps a mathematician could?).  I did, however, gain some interesting insight during this process.</p>
+				<p>The game can end after 3 turns are complete (one player is eliminated each turn), or it can go as long as 11 turns (if no princes are played, and at least two players survive until the end).  This means that the height of the tree is 5 + (11 * 3) = <b>38</b>, but leaf nodes can appear at depths <b>14</b> (5 + (3 * 3)) and below.</p>
+				<p>I also discovered that there are <b>10,897,286,400</b> (16!/5!2!2!2!2!) different ways a deck of <i>Love Letter</i> cards can be shuffled (<a href="https://brilliant.org/wiki/permutations-with-repetition/">source</a>).  This doesn’t mean that much for this problem since there are a lot of games that end before the entire deck is drawn, but it still gives some perspective on the problem’s enormity considering that the number is that big without taking into account any player decisions.</p>
+				<img src="img/love-letter-dt-card-grid.jpg" alt="">
+				<p>We can also establish upper and lower bounds by figuring out the minimum and maximum branch multiplier at each level of the tree.</p>
+				<p>The game that creates the lowest number of branches is actually a bit difficult to comprehend, but this is what I could come up with (somebody could probably come up with one that creates fewer, but oh well).  First, the King is set aside.  In the deal, player 1 gets the Countess, player 2 gets the Princess, player 3 gets a Baron, and player 4 gets a Prince.  Player 1 draws a Prince, plays it, and eliminates player 2.  Player 3 draws another Baron and his only possibility is eliminating himself since both other players have higher cards.  Player 4 then draws and plays a Guard and eliminates player 1 by guessing correctly.</p>
+				<p>Lower bound: 8*7*6*5*5*5*1*4*4*1*1*3*2*2 = <b>8,064,000</b></p>
+				<p>The upper bound is a bit easier to comprehend.  All the duplicate cards need to be drawn first, no Prince can ever be played (except for on the last turn), players can never hold two of the same card (or the Countess with the King or Prince), and the characters with branches that create more branches (Guard, Baron, etc.) are prioritized over those that create less (Priest, Countess, etc.).  There is more than one scenario that matches these conditions.</p>
+				<p>Upper bound: 8*8*8*8*8*8*2*4*8*2*4*8*2*4*8*2*4*7*2*3*6*2*3*5*2*3*4*2*1*3*2*1*2*2*1*1*2*4 = <b>38,303,114,830,786,068,480</b></p>
+				<p>So we’ve narrowed it down to a range of <b>38,303,114,830,778,004,480</b>…..  Fantastic.</p>
+				
+				<h3>Time for Some Code</h3>
+				<p>So what can we do when the math is too difficult?  I think it’s time to throw some silicon at the problem.  In the computer science world, we call it a good old-fashioned brute force algorithm (A.K.A. what you write when you don’t feel like thinking).</p>
+				<img src="img/code.jpg" alt="">
+				<p>I wrote a program that generates every single node in the decision tree by simulating every possible round of <i>Love Letter</i>.  The source code is <a href="LoveLetterTree.py">here</a>, if anyone is interested in playing around with it.  It’s a Python (3.6) script.</p>
+				<p>In summary, it defines and initializes a game state data structure and passes it to a recursive function which generates every possible child state of the current state, calls itself for all of its children, and adds up leaves from all of the resulting subtrees.  If you haven’t studied computer science, recursion can be a tricky concept to grasp, but if anyone is curious, <a href="https://www.khanacademy.org/computing/computer-science/algorithms/recursive-algorithms/a/recursion">this</a> is a great resource.</p>
+				<p>Once I finished the program and worked out the bugs, I tried running it.  Then I waited.  And I waited some more….. It never finished.  There are simply too many nodes to resolve them all, even if I leave the program running on my PC for 48 hours (yes, I tried it).</p>
+				<p>It was at this point that I realized my dream of calculating the exact number of paths was not going to come to fruition… I never expected that the number would be so large that my computer couldn’t even handle it.</p>
+				<p>Note to any fellow programmers reading this: I know that my algorithm is far from optimized, and that Python is slow, and that recursion is slow, and that I could have used methods X, Y, and Z to make it faster.  Unfortunately (as we’ll see in the next section), even if we make it a thousand times faster, it still wouldn’t be enough to calculate every possibility using my current hardware.  If anybody has access to a faster computer and/or wants to optimize the code to utilize concurrency, maybe it’s possible?  I’m sure that this would be the most important use of those processors :).</p>
+				
+				<h3>An Estimate</h3>
+				<p>Since I’ve already invested all this effort into this project, I might as well provide an estimate of the final number if I can’t calculate the real thing.  Even if the program can’t resolve the entire tree, it can resolve some of its subtrees in a decent amount of time.</p>
+				<p>By making a minor modification to the script, I was able to count the number of nodes at level 14 of the tree (right before the fourth turn starts).  There are exactly <b>42,083,981</b> nodes at depth 14, and it took <b>9037</b> seconds (~2.5 hours) to calculate them all.  That means we can count approximately <b>4657</b> nodes per second using this hardware.</p>
+				<p>By making a different modification, I was also able to time the calculation of one of the subtrees that range from depth 14 to the bottom of the tree (of which there are 42,083,981, so you can see why it would take so long to count them all).  It took <b>5773</b> seconds (~1.6 hours) to resolve this particular subtree, so if we’re resolving nodes at a rate of <b>4657</b> nodes per second, we can assume that it has about <b>26,884,861</b> nodes.</p>
+				<p>Therefore, if we assume that the subtree that we calculated is somewhat representative of the average subtree at this depth (kind of a ridiculous assumption, I know), and if we assume that my code doesn’t have any logic errors (probably another ridiculous assumption?), we can estimate the total number of <i>Love Letter</i> rounds as follows:</p>
+				<p>42,083,981 * 26,884,861 = <b>1,131,421,979,511,641</b></p>
+				<p>Not bad for 16 cards.</p>
+				<p>Fun fact: If there are actually this many games, it would take my computer <b>~7,704</b> years to find them all…..  Time for a new computer?</p>
+				
+				<p>Thanks for reading!</p>
+				<ul>
+					<li>Connect on <a href="https://boardgamegeek.com/blog/6218/party-hat-potato">BoardGameGeek</a>, <a href="https://www.twitter.com/partyhatpotato">Twitter</a>, <a href="https://www.facebook.com/partyhatpotato">Facebook</a>, or subscribe to my <a href="http://www.partyhatpotato.com/feed.xml">RSS feed</a> for updates.</li>
+					<li>I'm also looking for people to help me playtest my newest design: <a href="http://www.partyhatpotato.com/games/share-agraphs.html">SHAREagraphs</a>.  If you're interested, let me know!</li>
+				</ul>
+				<ul id="share_buttons" class="list-inline">
+					<li><div class="fb-share-button" data-href="http://www.partyhatpotato.com/blog/2017/3/love-letter-decision-tree.html" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.partyhatpotato.com%2Fblog%2F2017%2F3%2Flove-letter-decision-tree.html&amp;src=sdkpreparse">Share</a></div></li>
+					<li><a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=The%20Love%20Letter%20Decision%20Tree: " data-size="large">Tweet</a></li>
+					<li><g:plus action="share" annotation="none" height=28></g:plus></li>
+				</ul>
+			</div>
+			<h3 style="padding-top: 15px;">More Articles</h3>
+			<div class="post">
+				<a href="http://www.partyhatpotato.com/reviews/2017/3/escape-curse-temple-review.html">
+					<h3>Escape: The Curse of the Temple Review</h3>
+					<img src="http://www.partyhatpotato.com/reviews/2017/3/img/escape-thumb.jpg" style="float:left;" class="post_img"></img>
+					<p><i>For those times when you need just a bit more panic in your life.</i></p>
+					<p>3/11/2017</p>
+				</a>
+			</div>
+			<div class="post">
+				<a href="http://www.partyhatpotato.com/blog/2017/3/abandoned-prototypes.html">
+					<h3>Abandoned Prototypes</h3>
+					<img src="http://www.partyhatpotato.com/blog/2017/3/img/miner-dice2.jpg" style="float:left;" class="post_img"></img>
+					<p><i>"Success consists of going from failure to failure without loss of enthusiasm." - Winston Churchill</i></p>
+					<p>3/4/2017</p>
+				</a>
+			</div>
+			<div class="post">
+				<a href="http://www.partyhatpotato.com/reviews/2017/2/cash-n-guns-review.html">
+					<h3>Ca$h 'n Guns Review</h3>
+					<img src="http://www.partyhatpotato.com/reviews/2017/2/img/cash-n-guns-box.jpg" style="float:left;" class="post_img"></img>
+					<p><i>The glorious gangster gun game.</i></p>
+					<p>2/25/2017</p>
+				</a>
+			</div>
+			<div class="post">
+				<a href="http://www.partyhatpotato.com/blog/2017/2/next-era-board-games-1.html">
+					<h3>Next Era of Board Games</h3>
+					<img src="http://www.partyhatpotato.com/blog/2017/2/img/netg1-thumb.jpg" style="float:left;" class="post_img"></img>
+					<p><i>The growing prevalence of smartphones and mobile apps in tabletop games.</i></p>
+					<p>2/11/2017</p>
+				</a>
+			</div>
+			<div id="disqus_thread"></div>
+			<script>
+				var disqus_config = function () {
+					this.page.url = "http://www.partyhatpotato.com/blog/2017/3/love-letter-decision-tree.html";
+					this.page.identifier = "love-letter-decision-tree";
+				};
+				
+				(function() {
+					var d = document, s = d.createElement('script');
+					
+					s.src = '//partyhatpotato.disqus.com/embed.js';
+					
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+				})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+        <aside></aside>
+    </section>
+    <footer></footer>
+</div>
+<script type="text/javascript" src="../../../js/lists.js"></script>
+<script type="text/javascript" src="../../../js/general.js"></script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89390652-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
