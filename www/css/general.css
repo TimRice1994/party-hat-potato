@@ -345,6 +345,10 @@ h3 {
 	padding: 2px;
 }
 
+.fb_iframe_widget span {
+	vertical-align: baseline !important;
+}
+
 @media (max-width: 1000px) {
 	body {
 		width: 100% !important;
