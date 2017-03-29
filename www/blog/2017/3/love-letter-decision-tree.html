@@ -131,6 +131,7 @@
 				<p>We can also establish upper and lower bounds by figuring out the minimum and maximum branch multiplier at each level of the tree.</p>
 				<p>The game that creates the lowest number of branches is actually a bit difficult to comprehend, but this is what I could come up with (somebody could probably come up with one that creates fewer, but oh well).  First, the King is set aside.  In the deal, player 1 gets the Countess, player 2 gets the Princess, player 3 gets a Baron, and player 4 gets a Prince.  Player 1 draws a Prince, plays it, and eliminates player 2.  Player 3 draws another Baron and his only possibility is eliminating himself since both other players have higher cards.  Player 4 then draws and plays a Guard and eliminates player 1 by guessing correctly.</p>
 				<p>Lower bound: 8*7*6*5*5*5*1*4*4*1*1*3*2*2 = <b>8,064,000</b></p>
+				<p><b>Edit: </b>It's been pointed out to me that the above scenario is against the rules because Player 1 plays a Prince with a Countess in hand...  What a fail.  Anyway, disregard the lower bound because it isn't accurate.  The actual number is probably somewhere around there.</p>
 				<p>The upper bound is a bit easier to comprehend.  All the duplicate cards need to be drawn first, no Prince can ever be played (except for on the last turn), players can never hold two of the same card (or the Countess with the King or Prince), and the characters with branches that create more branches (Guard, Baron, etc.) are prioritized over those that create less (Priest, Countess, etc.).  There is more than one scenario that matches these conditions.</p>
 				<p>Upper bound: 8*8*8*8*8*8*2*4*8*2*4*8*2*4*8*2*4*7*2*3*6*2*3*5*2*3*4*2*1*3*2*1*2*2*1*1*2*4 = <b>38,303,114,830,786,068,480</b></p>
 				<p>So we’ve narrowed it down to a range of <b>38,303,114,830,778,004,480</b>…..  Fantastic.</p>
@@ -167,7 +168,7 @@
 			<h3 style="padding-top: 15px;">More Articles</h3>
 			<div class="post">
 				<a href="http://www.partyhatpotato.com/reviews/2017/3/escape-curse-temple-review.html">
-					<h3>Escape: The Curse of the Temple Review</h3>
+					<h3>Escape Review</h3>
 					<img src="http://www.partyhatpotato.com/reviews/2017/3/img/escape-thumb.jpg" style="float:left;" class="post_img"></img>
 					<p><i>For those times when you need just a bit more panic in your life.</i></p>
 					<p>3/11/2017</p>
