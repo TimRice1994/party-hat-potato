@@ -12,6 +12,12 @@
 	</image>
 	<atom:link href="http://www.partyhatpotato.com/feed.xml" rel="self" type="application/rss+xml"/>
 	<item>
+		<title>How to Host the Perfect Family Game Night</title>
+		<link>http://www.partyhatpotato.com/blog/2017/4/perfect-family-game-night.html</link>
+		<description>Helpful tips for your next board game extravaganza.</description>
+		<guid isPermaLink="false">perfect-family-game-night</guid>
+	</item>
+	<item>
 		<title>The Love Letter Decision Tree</title>
 		<link>http://www.partyhatpotato.com/blog/2017/3/love-letter-decision-tree.html</link>
 		<description>How many different ways can a round of Love Letter unfold?</description>
@@ -40,12 +46,6 @@
 		<link>http://www.partyhatpotato.com/blog/2017/2/next-era-board-games-2.html</link>
 		<description>The rise of progresseive board games.</description>
 		<guid isPermaLink="false">next-era-board-games-2</guid>
-	</item>
-	<item>
-		<title>The Next Era of Board Games: Part 1</title>
-		<link>http://www.partyhatpotato.com/blog/2017/2/next-era-board-games-1.html</link>
-		<description>The growing prevalence of smartphones and mobile apps in tabletop games.</description>
-		<guid isPermaLink="false">next-era-board-games-1</guid>
 	</item>
 </channel>
 
