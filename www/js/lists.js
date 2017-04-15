@@ -8,7 +8,7 @@ function post(titleIn, tagIn, authorIn, dateIn, thumbIn, urlIn) {
 }
 
 var blog_list = [
-new post("Hosting the Perfect Game Night", "Helpful tips for your next board game extravaganza.", "Tim Rice", new Date(2017,4-1,1), "http://www.partyhatpotato.com/blog/2017/4/img/monopoly.jpg", "http://www.partyhatpotato.com/blog/2017/4/perfect-family-game-night.html"),
+new post("Host a Perfect Game Night", "Helpful tips for your next board game extravaganza.", "Tim Rice", new Date(2017,4-1,1), "http://www.partyhatpotato.com/blog/2017/4/img/monopoly.jpg", "http://www.partyhatpotato.com/blog/2017/4/perfect-family-game-night.html"),
 new post("Love Letter Decision Tree", "How many different ways can a round of Love Letter unfold?", "Tim Rice", new Date(2017,3-1,26), "http://www.partyhatpotato.com/blog/2017/3/img/love-letter-decision-tree-thumb.jpg", "http://www.partyhatpotato.com/blog/2017/3/love-letter-decision-tree.html"),
 new post("Abandoned Prototypes", '"Success consists of going from failure to failure without loss of enthusiasm." - Winston Churchill', "Tim Rice", new Date(2017,3-1,4), "http://www.partyhatpotato.com/blog/2017/3/img/miner-dice2.jpg", "http://www.partyhatpotato.com/blog/2017/3/abandoned-prototypes.html"),
 new post("Next Era of Board Games (2/2)", "The rise of progressive board games.", "Tim Rice", new Date(2017,2-1,18), "http://www.partyhatpotato.com/blog/2017/2/img/netg2-thumb.jpg", "http://www.partyhatpotato.com/blog/2017/2/next-era-board-games-2.html"),
