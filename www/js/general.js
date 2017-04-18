@@ -123,7 +123,7 @@ function gen_aside() {
 	u_tag1.appendChild(recent_blogs_title_text);
 	recent_blogs_title.appendChild(u_tag1);
 	var recent_blogs_ul = document.createElement("ul");
-	for (var i = 0; i < 4; i++) {
+	for (var i = 0; i < 5; i++) {
 		var blog_li = document.createElement("li");
 		var blog_a = document.createElement("a");
 		blog_a.setAttribute("href", blog_list[i].url);
@@ -143,7 +143,7 @@ function gen_aside() {
 	u_tag2.appendChild(recent_reviews_title_text);
 	recent_reviews_title.appendChild(u_tag2);
 	var recent_reviews_ul = document.createElement("ul");
-	for (var i = 0; i < 4; i++) {
+	for (var i = 0; i < 5; i++) {
 		var review_li = document.createElement("li");
 		var review_a = document.createElement("a");
 		review_a.setAttribute("href", review_list[i].url);
