@@ -12,6 +12,12 @@
 	</image>
 	<atom:link href="http://www.partyhatpotato.com/feed.xml" rel="self" type="application/rss+xml"/>
 	<item>
+		<title>The Most Common Words in Board Gaming</title>
+		<link>http://www.partyhatpotato.com/blog/2017/5/most-common-board-game-words.html</link>
+		<description>Measuring and analyzing the most frequently used words in BoardGameGeek game descriptions.</description>
+		<guid isPermaLink="false">most-common-board-game-words</guid>
+	</item>
+	<item>
 		<title>Hey, That's My Fish! Review</title>
 		<link>http://www.partyhatpotato.com/reviews/2017/4/hey-thats-my-fish-review.html</link>
 		<description>The fish-gorging fiesta.</description>
@@ -40,12 +46,6 @@
 		<link>http://www.partyhatpotato.com/blog/2017/3/abandoned-prototypes.html</link>
 		<description>"Success consists of going from failure to failure without loss of enthusiasm." - Winston Churchill</description>
 		<guid isPermaLink="false">abandoned-prototypes</guid>
-	</item>
-	<item>
-		<title>Ca$h 'n Guns Review</title>
-		<link>http://www.partyhatpotato.com/reviews/2017/2/cash-n-guns-review.html</link>
-		<description>The glorious gangster gun game.</description>
-		<guid isPermaLink="false">cash-n-guns-review</guid>
 	</item>
 </channel>
 
