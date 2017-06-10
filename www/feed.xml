@@ -12,6 +12,12 @@
 	</image>
 	<atom:link href="http://www.partyhatpotato.com/feed.xml" rel="self" type="application/rss+xml"/>
 	<item>
+		<title>Revolution! Review</title>
+		<link>http://www.partyhatpotato.com/reviews/2017/6/revolution-review.html</link>
+		<description>Money can’t buy you happiness...but force and blackmail might.</description>
+		<guid isPermaLink="false">revolution-review</guid>
+	</item>
+	<item>
 		<title>The Most Common Words in Board Gaming</title>
 		<link>http://www.partyhatpotato.com/blog/2017/5/most-common-board-game-words.html</link>
 		<description>Measuring and analyzing the most frequently used words in BoardGameGeek game descriptions.</description>
@@ -40,12 +46,6 @@
 		<link>http://www.partyhatpotato.com/reviews/2017/3/escape-curse-temple-review.html</link>
 		<description>For those times when you need just a bit more panic in your life.</description>
 		<guid isPermaLink="false">escape-curse-temple-review</guid>
-	</item>
-	<item>
-		<title>Abandoned Prototypes</title>
-		<link>http://www.partyhatpotato.com/blog/2017/3/abandoned-prototypes.html</link>
-		<description>"Success consists of going from failure to failure without loss of enthusiasm." - Winston Churchill</description>
-		<guid isPermaLink="false">abandoned-prototypes</guid>
 	</item>
 </channel>
 
