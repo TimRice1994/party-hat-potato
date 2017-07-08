@@ -8,6 +8,7 @@ function post(titleIn, tagIn, authorIn, dateIn, thumbIn, urlIn) {
 }
 
 var blog_list = [
+new post("Designer vs. Players", "Discussing a fundamental dilemma for board game designers: what can we expect from players?", "Tim Rice", new Date(2017,7-1,8), "http://www.partyhatpotato.com/blog/2017/7/img/designer-vs-players-thumb-compressor.jpg", "http://www.partyhatpotato.com/blog/2017/7/designer-vs-players.html"),
 new post("Most Common Game Words", "Measuring and analyzing the most frequently used words in BoardGameGeek game descriptions.", "Tim Rice", new Date(2017,5-1,24), "http://www.partyhatpotato.com/blog/2017/5/img/codenames-thumb.jpg", "http://www.partyhatpotato.com/blog/2017/5/most-common-board-game-words.html"),
 new post("Host a Perfect Game Night", "Helpful tips for your next board game extravaganza.", "Tim Rice", new Date(2017,4-1,1), "http://www.partyhatpotato.com/blog/2017/4/img/monopoly.jpg", "http://www.partyhatpotato.com/blog/2017/4/perfect-family-game-night.html"),
 new post("Love Letter Decision Tree", "How many different ways can a round of Love Letter unfold?", "Tim Rice", new Date(2017,3-1,26), "http://www.partyhatpotato.com/blog/2017/3/img/love-letter-decision-tree-thumb.jpg", "http://www.partyhatpotato.com/blog/2017/3/love-letter-decision-tree.html"),

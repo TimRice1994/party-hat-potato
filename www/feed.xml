@@ -12,6 +12,12 @@
 	</image>
 	<atom:link href="http://www.partyhatpotato.com/feed.xml" rel="self" type="application/rss+xml"/>
 	<item>
+		<title>The Designer vs. The Players</title>
+		<link>http://www.partyhatpotato.com/blog/2017/7/designer-vs-players.html</link>
+		<description>Discussing a fundamental dilemma for board game designers: what can we expect from players?</description>
+		<guid isPermaLink="false">designer-vs-players</guid>
+	</item>
+	<item>
 		<title>Revolution! Review</title>
 		<link>http://www.partyhatpotato.com/reviews/2017/6/revolution-review.html</link>
 		<description>Money can’t buy you happiness...but force and blackmail might.</description>
@@ -40,12 +46,6 @@
 		<link>http://www.partyhatpotato.com/blog/2017/3/love-letter-decision-tree.html</link>
 		<description>How many different ways can a round of Love Letter unfold?</description>
 		<guid isPermaLink="false">love-letter-decision-tree</guid>
-	</item>
-	<item>
-		<title>Escape: The Curse of the Temple Review</title>
-		<link>http://www.partyhatpotato.com/reviews/2017/3/escape-curse-temple-review.html</link>
-		<description>For those times when you need just a bit more panic in your life.</description>
-		<guid isPermaLink="false">escape-curse-temple-review</guid>
 	</item>
 </channel>
 
