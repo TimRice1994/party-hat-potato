@@ -12,6 +12,12 @@
 	</image>
 	<atom:link href="http://www.partyhatpotato.com/feed.xml" rel="self" type="application/rss+xml"/>
 	<item>
+		<title>The Great Dalmuti Review</title>
+		<link>http://www.partyhatpotato.com/reviews/2017/7/great-dalmuti-review.html</link>
+		<description>The game where you become a peasant, suffer from taxation, and celebrate economic inequality!</description>
+		<guid isPermaLink="false">great-dalmuti-review</guid>
+	</item>
+	<item>
 		<title>The Designer vs. The Players</title>
 		<link>http://www.partyhatpotato.com/blog/2017/7/designer-vs-players.html</link>
 		<description>Discussing a fundamental dilemma for board game designers: what can we expect from players?</description>
@@ -40,12 +46,6 @@
 		<link>http://www.partyhatpotato.com/blog/2017/4/perfect-family-game-night.html</link>
 		<description>Helpful tips for your next board game extravaganza.</description>
 		<guid isPermaLink="false">perfect-family-game-night</guid>
-	</item>
-	<item>
-		<title>The Love Letter Decision Tree</title>
-		<link>http://www.partyhatpotato.com/blog/2017/3/love-letter-decision-tree.html</link>
-		<description>How many different ways can a round of Love Letter unfold?</description>
-		<guid isPermaLink="false">love-letter-decision-tree</guid>
 	</item>
 </channel>
 
