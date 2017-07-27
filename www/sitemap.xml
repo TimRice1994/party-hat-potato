@@ -21,7 +21,19 @@
       <loc>http://www.partyhatpotato.com/games/share-agraphs.html</loc>
    </url>
    <url>
+      <loc>http://www.partyhatpotato.com/games/files/instructions.pdf</loc>
+   </url>
+   <url>
+      <loc>http://www.partyhatpotato.com/games/files/prompt_cards.pdf</loc>
+   </url>
+   <url>
+      <loc>http://www.partyhatpotato.com/games/files/word_cards.pdf</loc>
+   </url>
+   <url>
       <loc>http://www.partyhatpotato.com/contact/index.html</loc>
+   </url>
+   <url>
+      <loc>http://www.partyhatpotato.com/feed.xml</loc>
    </url>
    <url>
       <loc>http://www.partyhatpotato.com/blog/2016/12/introduction.html</loc>
@@ -66,6 +78,9 @@
       <loc>http://www.partyhatpotato.com/blog/2017/3/love-letter-decision-tree.html</loc>
    </url>
    <url>
+      <loc>http://www.partyhatpotato.com/blog/2017/3/LoveLetterTree.py</loc>
+   </url>
+   <url>
       <loc>http://www.partyhatpotato.com/blog/2017/4/perfect-family-game-night.html</loc>
    </url>
    <url>
@@ -73,6 +88,12 @@
    </url>
    <url>
       <loc>http://www.partyhatpotato.com/blog/2017/5/most-common-board-game-words.html</loc>
+   </url>
+   <url>
+      <loc>http://www.partyhatpotato.com/blog/2017/5/bggwords.py</loc>
+   </url>
+   <url>
+      <loc>http://www.partyhatpotato.com/blog/2017/5/bgg-top-1000-words.txt</loc>
    </url>
    <url>
       <loc>http://www.partyhatpotato.com/reviews/2017/6/revolution-review.html</loc>
