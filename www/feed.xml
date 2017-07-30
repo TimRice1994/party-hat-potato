@@ -12,6 +12,12 @@
 	</image>
 	<atom:link href="http://www.partyhatpotato.com/feed.xml" rel="self" type="application/rss+xml"/>
 	<item>
+		<title>Mega Hits of the Board Game Industry</title>
+		<link>http://www.partyhatpotato.com/blog/2017/7/mega-hits-board-game-industry.html</link>
+		<description>What do the most successful hobby board games of the past few decades have in common?</description>
+		<guid isPermaLink="false">mega-hits-board-game-industry</guid>
+	</item>
+	<item>
 		<title>The Great Dalmuti Review</title>
 		<link>http://www.partyhatpotato.com/reviews/2017/7/great-dalmuti-review.html</link>
 		<description>The game where you become a peasant, suffer from taxation, and celebrate economic inequality!</description>
@@ -40,12 +46,6 @@
 		<link>http://www.partyhatpotato.com/reviews/2017/4/hey-thats-my-fish-review.html</link>
 		<description>The fish-gorging fiesta.</description>
 		<guid isPermaLink="false">hey-thats-my-fish-review</guid>
-	</item>
-	<item>
-		<title>How to Host the Perfect Family Game Night</title>
-		<link>http://www.partyhatpotato.com/blog/2017/4/perfect-family-game-night.html</link>
-		<description>Helpful tips for your next board game extravaganza.</description>
-		<guid isPermaLink="false">perfect-family-game-night</guid>
 	</item>
 </channel>
 
