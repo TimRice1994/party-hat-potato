@@ -23,6 +23,7 @@ new post("Introduction", "The potato has launched.", "Tim Rice", new Date(2016,1
 ];
 
 var review_list = [
+new post("Camel Up Review", "Or is it Camel Cup? Could it be Amel Cup? What’s an amel?", "Tim Rice", new Date(2017,8-1,26), "http://www.partyhatpotato.com/reviews/2017/8/img/camel_up_box-compressor.jpg", "http://www.partyhatpotato.com/reviews/2017/8/camel-up-review.html"),
 new post("The Great Dalmuti Review", "The game where you become a peasant, suffer from taxation, and celebrate economic inequality!", "Tim Rice", new Date(2017,7-1,15), "http://www.partyhatpotato.com/reviews/2017/7/img/great-dalmuti-thumb-compressor.jpg", "http://www.partyhatpotato.com/reviews/2017/7/great-dalmuti-review.html"),
 new post("Revolution! Review", "Money can’t buy you happiness...but force and blackmail might.", "Tim Rice", new Date(2017,6-1,9), "http://www.partyhatpotato.com/reviews/2017/6/img/revolution-box.jpg", "http://www.partyhatpotato.com/reviews/2017/6/revolution-review.html"),
 new post("Hey, That's My Fish! Review", "The fish-gorging fiesta.", "Tim Rice", new Date(2017,4-1,15), "http://www.partyhatpotato.com/reviews/2017/4/img/hey-thats-my-fish-box.jpg", "http://www.partyhatpotato.com/reviews/2017/4/hey-thats-my-fish-review.html"),

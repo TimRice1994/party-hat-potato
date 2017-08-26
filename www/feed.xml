@@ -12,6 +12,12 @@
 	</image>
 	<atom:link href="http://www.partyhatpotato.com/feed.xml" rel="self" type="application/rss+xml"/>
 	<item>
+		<title>Camel Up Review</title>
+		<link>http://www.partyhatpotato.com/reviews/2017/8/camel-up-review.html</link>
+		<description>Or is it Camel Cup? Could it be Amel Cup? What’s an amel?</description>
+		<guid isPermaLink="false">camel-up-review</guid>
+	</item>
+	<item>
 		<title>Mega Hits of the Board Game Industry</title>
 		<link>http://www.partyhatpotato.com/blog/2017/7/mega-hits-board-game-industry.html</link>
 		<description>What do the most successful hobby board games of the past few decades have in common?</description>
@@ -40,12 +46,6 @@
 		<link>http://www.partyhatpotato.com/blog/2017/5/most-common-board-game-words.html</link>
 		<description>Measuring and analyzing the most frequently used words in BoardGameGeek game descriptions.</description>
 		<guid isPermaLink="false">most-common-board-game-words</guid>
-	</item>
-	<item>
-		<title>Hey, That's My Fish! Review</title>
-		<link>http://www.partyhatpotato.com/reviews/2017/4/hey-thats-my-fish-review.html</link>
-		<description>The fish-gorging fiesta.</description>
-		<guid isPermaLink="false">hey-thats-my-fish-review</guid>
 	</item>
 </channel>
 
