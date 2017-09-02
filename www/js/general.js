@@ -165,6 +165,14 @@ function gen_aside() {
 	my_games_title.appendChild(u_tag3);
 	games_cont.appendChild(my_games_title);
 	
+	var dig_deep_a = document.createElement("a");
+	dig_deep_a.setAttribute("href", "http://www.partyhatpotato.com/games/dig_deep.html");
+	var dig_deep_img = document.createElement("img");
+	dig_deep_img.setAttribute("src", "http://www.partyhatpotato.com/img/dig_deep_icon.jpg");
+	dig_deep_img.setAttribute("style", "width: 215px;")
+	dig_deep_a.appendChild(dig_deep_img);
+	games_cont.appendChild(dig_deep_a);
+	
 	var shareagraphs_a = document.createElement("a");
 	shareagraphs_a.setAttribute("href", "http://www.partyhatpotato.com/games/share-agraphs.html");
 	var shareagraphs_img = document.createElement("img");

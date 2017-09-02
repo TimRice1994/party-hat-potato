@@ -36,5 +36,6 @@ new post("King of Tokyo Review", "Giant monsters, giant dice, giant fun.", "Tim 
 ];
 
 var games_list = [
+new post("Dig Deep", "Roll dice, find gems, make money.", "Tim Rice", new Date(2017,9-1,2), "http://www.partyhatpotato.com/games/img/dig_deep_components-compressor.jpg", "http://www.partyhatpotato.com/games/dig_deep.html"),
 new post("SHAREagraphs", "The creative writing party game.", "Tim Rice", new Date(2017,1-1,8), "http://www.partyhatpotato.com/games/img/share-agraphs_thumb.jpg", "http://www.partyhatpotato.com/games/share-agraphs.html")
 ];
