@@ -12,6 +12,12 @@
 	</image>
 	<atom:link href="http://www.partyhatpotato.com/feed.xml" rel="self" type="application/rss+xml"/>
 	<item>
+		<title>Board Game Achievements</title>
+		<link>http://www.partyhatpotato.com/blog/2017/11/board-game-achievements.html</link>
+		<description>A random list of extra challenges for some of my favorite games.</description>
+		<guid isPermaLink="false">board-game-achievements</guid>
+	</item>
+	<item>
 		<title>Dig Deep</title>
 		<link>http://www.partyhatpotato.com/games/dig_deep.html</link>
 		<description>Roll dice, find gems, make money.</description>
@@ -40,12 +46,6 @@
 		<link>http://www.partyhatpotato.com/blog/2017/7/designer-vs-players.html</link>
 		<description>Discussing a fundamental dilemma for board game designers: what can we expect from players?</description>
 		<guid isPermaLink="false">designer-vs-players</guid>
-	</item>
-	<item>
-		<title>Revolution! Review</title>
-		<link>http://www.partyhatpotato.com/reviews/2017/6/revolution-review.html</link>
-		<description>Money can’t buy you happiness...but force and blackmail might.</description>
-		<guid isPermaLink="false">revolution-review</guid>
 	</item>
 </channel>
 

@@ -7,7 +7,18 @@ function post(titleIn, tagIn, authorIn, dateIn, thumbIn, urlIn) {
 	this.url = urlIn;
 }
 
+function review_post(titleIn, tagIn, authorIn, dateIn, thumbIn, urlIn, scoreIn) {
+	this.title = titleIn;
+	this.tag = tagIn;
+	this.author = authorIn;
+	this.date = dateIn;
+	this.thumb = thumbIn;
+	this.url = urlIn;
+	this.score = scoreIn;
+}
+
 var blog_list = [
+new post("Board Game Achievements", "A random list of extra challenges for some of my favorite games.", "Tim Rice", new Date(2017,11-1,25), "http://www.partyhatpotato.com/blog/2017/11/img/board-game-achievements-thumb-compressor.jpg", "http://www.partyhatpotato.com/blog/2017/11/board-game-achievements.html"),
 new post("Mega Hit Board Games", "What do the most successful hobby board games of the past few decades have in common?", "Tim Rice", new Date(2017,7-1,29), "http://www.partyhatpotato.com/blog/2017/7/img/mega-hits-thumb-compressor.jpg", "http://www.partyhatpotato.com/blog/2017/7/mega-hits-board-game-industry.html"),
 new post("Designer vs. Players", "Discussing a fundamental dilemma for board game designers: what can we expect from players?", "Tim Rice", new Date(2017,7-1,8), "http://www.partyhatpotato.com/blog/2017/7/img/designer-vs-players-thumb-compressor.jpg", "http://www.partyhatpotato.com/blog/2017/7/designer-vs-players.html"),
 new post("Most Common Game Words", "Measuring and analyzing the most frequently used words in BoardGameGeek game descriptions.", "Tim Rice", new Date(2017,5-1,24), "http://www.partyhatpotato.com/blog/2017/5/img/codenames-thumb.jpg", "http://www.partyhatpotato.com/blog/2017/5/most-common-board-game-words.html"),
@@ -23,16 +34,16 @@ new post("Introduction", "The potato has launched.", "Tim Rice", new Date(2016,1
 ];
 
 var review_list = [
-new post("Camel Up Review", "Or is it Camel Cup? Could it be Amel Cup? What’s an amel?", "Tim Rice", new Date(2017,8-1,26), "http://www.partyhatpotato.com/reviews/2017/8/img/camel_up_box-compressor.jpg", "http://www.partyhatpotato.com/reviews/2017/8/camel-up-review.html"),
-new post("The Great Dalmuti Review", "The game where you become a peasant, suffer from taxation, and celebrate economic inequality!", "Tim Rice", new Date(2017,7-1,15), "http://www.partyhatpotato.com/reviews/2017/7/img/great-dalmuti-thumb-compressor.jpg", "http://www.partyhatpotato.com/reviews/2017/7/great-dalmuti-review.html"),
-new post("Revolution! Review", "Money can’t buy you happiness...but force and blackmail might.", "Tim Rice", new Date(2017,6-1,9), "http://www.partyhatpotato.com/reviews/2017/6/img/revolution-box.jpg", "http://www.partyhatpotato.com/reviews/2017/6/revolution-review.html"),
-new post("Hey, That's My Fish! Review", "The fish-gorging fiesta.", "Tim Rice", new Date(2017,4-1,15), "http://www.partyhatpotato.com/reviews/2017/4/img/hey-thats-my-fish-box.jpg", "http://www.partyhatpotato.com/reviews/2017/4/hey-thats-my-fish-review.html"),
-new post("Escape Review", "For those times when you need just a bit more panic in your life.", "Tim Rice", new Date(2017,3-1,11), "http://www.partyhatpotato.com/reviews/2017/3/img/escape-thumb.jpg", "http://www.partyhatpotato.com/reviews/2017/3/escape-curse-temple-review.html"),
-new post("Ca$h 'n Guns Review", "The glorious gangster gun game.", "Tim Rice", new Date(2017,2-1,25), "http://www.partyhatpotato.com/reviews/2017/2/img/cash-n-guns-box.jpg", "http://www.partyhatpotato.com/reviews/2017/2/cash-n-guns-review.html"),
-new post("Galaxy Trucker Review", "It’s like building a beautiful snowman, and then watching it melt.", "Tim Rice", new Date(2017,2-1,4), "http://www.partyhatpotato.com/reviews/2017/2/img/galaxy-trucker-box.jpg", "http://www.partyhatpotato.com/reviews/2017/2/galaxy-trucker-review.html"),
-new post("Citadels Review", "Every great city needs a few assassins and thieves.", "Tim Rice", new Date(2017,1-1,21), "http://www.partyhatpotato.com/reviews/2017/1/img/citadels-box.jpg", "http://www.partyhatpotato.com/reviews/2017/1/citadels-review.html"),
-new post("Battle Line Review", "I just need to draw this one card.....Dang. I'll get it next time for sure though.", "Tim Rice", new Date(2017,1-1,5), "http://www.partyhatpotato.com/reviews/2017/1/img/battle-line-box.jpg", "http://www.partyhatpotato.com/reviews/2017/1/battle-line-review.html"),
-new post("King of Tokyo Review", "Giant monsters, giant dice, giant fun.", "Tim Rice", new Date(2016,12-1,19), "http://www.partyhatpotato.com/reviews/2016/12/img/kot_box.jpg", "http://www.partyhatpotato.com/reviews/2016/12/king-of-tokyo-review.html")
+new review_post("Camel Up Review", "Or is it Camel Cup? Could it be Amel Cup? What’s an amel?", "Tim Rice", new Date(2017,8-1,26), "http://www.partyhatpotato.com/reviews/2017/8/img/camel_up_box-compressor.jpg", "http://www.partyhatpotato.com/reviews/2017/8/camel-up-review.html", 3.5),
+new review_post("The Great Dalmuti Review", "The game where you become a peasant, suffer from taxation, and celebrate economic inequality!", "Tim Rice", new Date(2017,7-1,15), "http://www.partyhatpotato.com/reviews/2017/7/img/great-dalmuti-thumb-compressor.jpg", "http://www.partyhatpotato.com/reviews/2017/7/great-dalmuti-review.html", 3),
+new review_post("Revolution! Review", "Money can’t buy you happiness...but force and blackmail might.", "Tim Rice", new Date(2017,6-1,9), "http://www.partyhatpotato.com/reviews/2017/6/img/revolution-box.jpg", "http://www.partyhatpotato.com/reviews/2017/6/revolution-review.html", 4),
+new review_post("Hey, That's My Fish! Review", "The fish-gorging fiesta.", "Tim Rice", new Date(2017,4-1,15), "http://www.partyhatpotato.com/reviews/2017/4/img/hey-thats-my-fish-box.jpg", "http://www.partyhatpotato.com/reviews/2017/4/hey-thats-my-fish-review.html", 4.5),
+new review_post("Escape Review", "For those times when you need just a bit more panic in your life.", "Tim Rice", new Date(2017,3-1,11), "http://www.partyhatpotato.com/reviews/2017/3/img/escape-thumb.jpg", "http://www.partyhatpotato.com/reviews/2017/3/escape-curse-temple-review.html", 4),
+new review_post("Ca$h 'n Guns Review", "The glorious gangster gun game.", "Tim Rice", new Date(2017,2-1,25), "http://www.partyhatpotato.com/reviews/2017/2/img/cash-n-guns-box.jpg", "http://www.partyhatpotato.com/reviews/2017/2/cash-n-guns-review.html", 4),
+new review_post("Galaxy Trucker Review", "It’s like building a beautiful snowman, and then watching it melt.", "Tim Rice", new Date(2017,2-1,4), "http://www.partyhatpotato.com/reviews/2017/2/img/galaxy-trucker-box.jpg", "http://www.partyhatpotato.com/reviews/2017/2/galaxy-trucker-review.html", 5),
+new review_post("Citadels Review", "Every great city needs a few assassins and thieves.", "Tim Rice", new Date(2017,1-1,21), "http://www.partyhatpotato.com/reviews/2017/1/img/citadels-box.jpg", "http://www.partyhatpotato.com/reviews/2017/1/citadels-review.html", 2),
+new review_post("Battle Line Review", "I just need to draw this one card.....Dang. I'll get it next time for sure though.", "Tim Rice", new Date(2017,1-1,5), "http://www.partyhatpotato.com/reviews/2017/1/img/battle-line-box.jpg", "http://www.partyhatpotato.com/reviews/2017/1/battle-line-review.html", 4.5),
+new review_post("King of Tokyo Review", "Giant monsters, giant dice, giant fun.", "Tim Rice", new Date(2016,12-1,19), "http://www.partyhatpotato.com/reviews/2016/12/img/kot_box.jpg", "http://www.partyhatpotato.com/reviews/2016/12/king-of-tokyo-review.html", 4)
 ];
 
 var games_list = [

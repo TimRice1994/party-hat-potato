@@ -1,4 +1,4 @@
-function gen_archive() {
+/*function gen_archive() {
 	var archive_obj = {};
 	for (var i = blog_list.length-1; i >= 0; i--) {
 		var year_str = String(blog_list[i].date.getFullYear());
@@ -57,6 +57,58 @@ function gen_archive() {
 			this.nextElementSibling.classList.toggle("show");
 		}
 	}
+}*/
+
+function gen_archive() {
+	var table = document.createElement("table");
+	table.setAttribute("class", "sortable");
+	table.setAttribute("id", "archive_table");
+	
+	var head_row = document.createElement("tr");
+	var title_th = document.createElement("th");
+	title_th.setAttribute("style", "width:60%");
+	var title_th_text = document.createTextNode("Title");
+	title_th.appendChild(title_th_text);
+	head_row.appendChild(title_th);
+	
+	var date_th = document.createElement("th");
+	date_th.setAttribute("style", "width:40%");
+	var date_th_text = document.createTextNode("Post Date");
+	date_th.appendChild(date_th_text);
+	head_row.appendChild(date_th);
+	
+	table.appendChild(head_row);
+	
+	var tbody = document.createElement("tbody");
+	for (var i = 0; i < blog_list.length; i++) {
+		var row = document.createElement("tr");
+		var cur_title = document.createElement("td");
+		var cur_title_a = document.createElement("a");
+		cur_title_a.setAttribute("href", blog_list[i].url);
+		var cur_title_text = document.createTextNode(blog_list[i].title);
+		cur_title_a.appendChild(cur_title_text);
+		cur_title.appendChild(cur_title_a);
+		row.appendChild(cur_title);
+		
+		var cur_date = document.createElement("td");
+		var date_str = String(blog_list[i].date.getFullYear());
+		if (blog_list[i].date.getMonth() + 1 < 10) {
+			date_str = date_str.concat("0");
+		}
+		date_str = date_str.concat(String(blog_list[i].date.getMonth()+1));
+		if (blog_list[i].date.getDate() < 10) {
+			date_str = date_str.concat("0");
+		}
+		date_str = date_str.concat(String(blog_list[i].date.getDate()));
+		cur_date.setAttribute("sorttable_customkey", date_str);
+		var cur_date_text = document.createTextNode((((String(blog_list[i].date.getMonth()+1).concat("/")).concat(String(blog_list[i].date.getDate()))).concat("/")).concat(String(blog_list[i].date.getFullYear())));
+		cur_date.appendChild(cur_date_text);
+		row.appendChild(cur_date);
+		
+		tbody.appendChild(row);
+	}
+	table.appendChild(tbody);
+	document.getElementById("archive").appendChild(table);
 }
 
 function gen_latest() {

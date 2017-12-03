@@ -429,3 +429,32 @@ td {
 		font-size: 4vw !important;
 	}
 }
+
+table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
+    content: " \25B4\25BE" 
+}
+
+#archive table {
+	border-collapse: collapse;
+	background-color: #ffffff;
+}
+
+#archive th:hover {
+	background-color: #eeeeee;
+}
+
+#archive a:hover {
+	text-decoration: underline;
+}
+
+#archive a {
+	color: #0000EE;
+}
+
+#archive th {
+	padding: 20px;
+}
+
+#archive td {
+	padding: 8px;
+}
