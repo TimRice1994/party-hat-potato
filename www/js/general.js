@@ -77,7 +77,7 @@ function gen_header() {
 function gen_footer() {
 	var footer_p = document.createElement("p");
 	footer_p.setAttribute("id", "foot");
-	var footer_text = document.createTextNode("\xA9 ".concat(String(new Date().getFullYear())));
+	var footer_text = document.createTextNode("\xA9 ".concat("2016-").concat(String(new Date().getFullYear())));
 	footer_p.appendChild(footer_text);
 	document.getElementsByTagName("footer")[0].appendChild(footer_p);
 }

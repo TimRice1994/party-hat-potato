@@ -34,6 +34,7 @@ new post("Introduction", "The potato has launched.", "Tim Rice", new Date(2016,1
 ];
 
 var review_list = [
+new review_post("Biblios Review", "Is there anything cooler than book collecting?", "Tim Rice", new Date(2017,12-1,3), "http://www.partyhatpotato.com/reviews/2017/12/img/biblios_thumb-compressor.jpg", "http://www.partyhatpotato.com/reviews/2017/12/biblios-review.html", 4.5),
 new review_post("Camel Up Review", "Or is it Camel Cup? Could it be Amel Cup? What’s an amel?", "Tim Rice", new Date(2017,8-1,26), "http://www.partyhatpotato.com/reviews/2017/8/img/camel_up_box-compressor.jpg", "http://www.partyhatpotato.com/reviews/2017/8/camel-up-review.html", 3.5),
 new review_post("The Great Dalmuti Review", "The game where you become a peasant, suffer from taxation, and celebrate economic inequality!", "Tim Rice", new Date(2017,7-1,15), "http://www.partyhatpotato.com/reviews/2017/7/img/great-dalmuti-thumb-compressor.jpg", "http://www.partyhatpotato.com/reviews/2017/7/great-dalmuti-review.html", 3),
 new review_post("Revolution! Review", "Money can’t buy you happiness...but force and blackmail might.", "Tim Rice", new Date(2017,6-1,9), "http://www.partyhatpotato.com/reviews/2017/6/img/revolution-box.jpg", "http://www.partyhatpotato.com/reviews/2017/6/revolution-review.html", 4),
