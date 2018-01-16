@@ -18,6 +18,7 @@ function review_post(titleIn, tagIn, authorIn, dateIn, thumbIn, urlIn, scoreIn) 
 }
 
 var blog_list = [
+new post("One Year Retrospective", "Celebrating a year of partyhatpotato.com", "Tim Rice", new Date(2017,12-1,18), "http://www.partyhatpotato.com/blog/2017/12/img/one-year-thumb-compressor.jpg", "http://www.partyhatpotato.com/blog/2017/12/one-year-retrospective.html"),
 new post("Board Game Achievements", "A random list of extra challenges for some of my favorite games.", "Tim Rice", new Date(2017,11-1,25), "http://www.partyhatpotato.com/blog/2017/11/img/board-game-achievements-thumb-compressor.jpg", "http://www.partyhatpotato.com/blog/2017/11/board-game-achievements.html"),
 new post("Mega Hit Board Games", "What do the most successful hobby board games of the past few decades have in common?", "Tim Rice", new Date(2017,7-1,29), "http://www.partyhatpotato.com/blog/2017/7/img/mega-hits-thumb-compressor.jpg", "http://www.partyhatpotato.com/blog/2017/7/mega-hits-board-game-industry.html"),
 new post("Designer vs. Players", "Discussing a fundamental dilemma for board game designers: what can we expect from players?", "Tim Rice", new Date(2017,7-1,8), "http://www.partyhatpotato.com/blog/2017/7/img/designer-vs-players-thumb-compressor.jpg", "http://www.partyhatpotato.com/blog/2017/7/designer-vs-players.html"),
@@ -34,6 +35,7 @@ new post("Introduction", "The potato has launched.", "Tim Rice", new Date(2016,1
 ];
 
 var review_list = [
+new review_post("Junk Art Review", "This jagged, unstable structure is sure to please the critics.", "Tim Rice", new Date(2018,1-1,15), "http://www.partyhatpotato.com/reviews/2018/1/img/junk-art-box-compressor.jpg", "http://www.partyhatpotato.com/reviews/2018/1/junk-art-review.html", 4.5),
 new review_post("Biblios Review", "Is there anything cooler than book collecting?", "Tim Rice", new Date(2017,12-1,3), "http://www.partyhatpotato.com/reviews/2017/12/img/biblios_thumb-compressor.jpg", "http://www.partyhatpotato.com/reviews/2017/12/biblios-review.html", 4.5),
 new review_post("Camel Up Review", "Or is it Camel Cup? Could it be Amel Cup? What’s an amel?", "Tim Rice", new Date(2017,8-1,26), "http://www.partyhatpotato.com/reviews/2017/8/img/camel_up_box-compressor.jpg", "http://www.partyhatpotato.com/reviews/2017/8/camel-up-review.html", 3.5),
 new review_post("The Great Dalmuti Review", "The game where you become a peasant, suffer from taxation, and celebrate economic inequality!", "Tim Rice", new Date(2017,7-1,15), "http://www.partyhatpotato.com/reviews/2017/7/img/great-dalmuti-thumb-compressor.jpg", "http://www.partyhatpotato.com/reviews/2017/7/great-dalmuti-review.html", 3),

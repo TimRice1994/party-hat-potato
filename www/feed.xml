@@ -12,6 +12,18 @@
 	</image>
 	<atom:link href="http://www.partyhatpotato.com/feed.xml" rel="self" type="application/rss+xml"/>
 	<item>
+		<title>Junk Art Review</title>
+		<link>http://www.partyhatpotato.com/blog/2018/1/junk-art-review.html</link>
+		<description>This jagged, unstable structure is sure to please the critics.</description>
+		<guid isPermaLink="false">junk-art-review</guid>
+	</item>
+	<item>
+		<title>One Year Retrospective</title>
+		<link>http://www.partyhatpotato.com/blog/2017/12/one-year-retrospective.html</link>
+		<description>Celebrating a year of partyhatpotato.com</description>
+		<guid isPermaLink="false">one-year-retrospective</guid>
+	</item>
+	<item>
 		<title>Biblios Review</title>
 		<link>http://www.partyhatpotato.com/reviews/2017/12/biblios-review.html</link>
 		<description>Is there anything cooler than book collecting?</description>
@@ -34,18 +46,6 @@
 		<link>http://www.partyhatpotato.com/reviews/2017/8/camel-up-review.html</link>
 		<description>Or is it Camel Cup? Could it be Amel Cup? What’s an amel?</description>
 		<guid isPermaLink="false">camel-up-review</guid>
-	</item>
-	<item>
-		<title>Mega Hits of the Board Game Industry</title>
-		<link>http://www.partyhatpotato.com/blog/2017/7/mega-hits-board-game-industry.html</link>
-		<description>What do the most successful hobby board games of the past few decades have in common?</description>
-		<guid isPermaLink="false">mega-hits-board-game-industry</guid>
-	</item>
-	<item>
-		<title>The Great Dalmuti Review</title>
-		<link>http://www.partyhatpotato.com/reviews/2017/7/great-dalmuti-review.html</link>
-		<description>The game where you become a peasant, suffer from taxation, and celebrate economic inequality!</description>
-		<guid isPermaLink="false">great-dalmuti-review</guid>
 	</item>
 </channel>
 
