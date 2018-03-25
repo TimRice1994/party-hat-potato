@@ -18,6 +18,7 @@ function review_post(titleIn, tagIn, authorIn, dateIn, thumbIn, urlIn, scoreIn) 
 }
 
 var blog_list = [
+new post("Ridiculous Box Sizes", "A study to determine how oversized board game boxes really are.", "Tim Rice", new Date(2018,2-1,11), "http://www.partyhatpotato.com/blog/2018/2/img/wasted_shelf_space_thumb-compressor.jpg", "http://www.partyhatpotato.com/blog/2018/2/wasted-shelf-space.html"),
 new post("One Year Retrospective", "Celebrating a year of partyhatpotato.com", "Tim Rice", new Date(2017,12-1,18), "http://www.partyhatpotato.com/blog/2017/12/img/one-year-thumb-compressor.jpg", "http://www.partyhatpotato.com/blog/2017/12/one-year-retrospective.html"),
 new post("Board Game Achievements", "A random list of extra challenges for some of my favorite games.", "Tim Rice", new Date(2017,11-1,25), "http://www.partyhatpotato.com/blog/2017/11/img/board-game-achievements-thumb-compressor.jpg", "http://www.partyhatpotato.com/blog/2017/11/board-game-achievements.html"),
 new post("Mega Hit Board Games", "What do the most successful hobby board games of the past few decades have in common?", "Tim Rice", new Date(2017,7-1,29), "http://www.partyhatpotato.com/blog/2017/7/img/mega-hits-thumb-compressor.jpg", "http://www.partyhatpotato.com/blog/2017/7/mega-hits-board-game-industry.html"),

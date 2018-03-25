@@ -12,6 +12,12 @@
 	</image>
 	<atom:link href="http://www.partyhatpotato.com/feed.xml" rel="self" type="application/rss+xml"/>
 	<item>
+		<title>Ridiculous Box Sizes: How Much Shelf Space is Wasted?</title>
+		<link>http://www.partyhatpotato.com/blog/2018/2/wasted-shelf-space.html</link>
+		<description>A study to determine how oversized board game boxes really are.</description>
+		<guid isPermaLink="false">wasted-shelf-space</guid>
+	</item>
+	<item>
 		<title>Junk Art Review</title>
 		<link>http://www.partyhatpotato.com/blog/2018/1/junk-art-review.html</link>
 		<description>This jagged, unstable structure is sure to please the critics.</description>
@@ -40,12 +46,6 @@
 		<link>http://www.partyhatpotato.com/games/dig_deep.html</link>
 		<description>Roll dice, find gems, make money.</description>
 		<guid isPermaLink="false">dig-deep</guid>
-	</item>
-	<item>
-		<title>Camel Up Review</title>
-		<link>http://www.partyhatpotato.com/reviews/2017/8/camel-up-review.html</link>
-		<description>Or is it Camel Cup? Could it be Amel Cup? What’s an amel?</description>
-		<guid isPermaLink="false">camel-up-review</guid>
 	</item>
 </channel>
 
